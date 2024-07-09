@@ -7,6 +7,8 @@ import pymunk.pygame_util
 import numpy as np
 from numpy import pi
 
+# random.seed(1)
+
 def limit_velocity(body, gravity, damping, dt):
         max_velocity = 100
         pymunk.Body.update_velocity(body, gravity, body.damping, dt)
@@ -50,8 +52,8 @@ class Nav_Obstacle_Env(object):
         self._add_static_scenery()
 
         # The agent to be controlled
-        y_pos = random.randint(50,550)
-        self._agent = self._create_agent(vertices=((-25,-25), (-25,25), (25,25), (25,-25)), mass=10, position=(450, y_pos), damping=0.99)
+        agent_y_pos = random.randint(50,550)
+        self._agent = self._create_agent(vertices=((-25,-25), (-25,25), (25,25), (25,-25)), mass=10, position=(450, agent_y_pos), damping=0.99)
         for key in self._agent:
             self._agent[key].score = 0
 
@@ -78,7 +80,7 @@ class Nav_Obstacle_Env(object):
 
         self.goal_position = (25,75)
         self.initial_agent_dist = distance(self._agent['robot'].position, self.goal_position)
-        self.initial_robot_pos = (450,500)
+        self.initial_agent_pos = self._agent['robot'].position
 
         # Collision Handling
         # Robot: 0, Obstacles: 1, Goal: 2
@@ -99,16 +101,25 @@ class Nav_Obstacle_Env(object):
         :return: None
         """
         static_body = self._space.static_body
-        static_obstacles = [
-            pymunk.Poly(static_body, ((275,150), (325,150), (325, 200), (275,200))),
-            pymunk.Poly(static_body, ((300, 350), (200, 350), (200, 400), (300, 400)))
-        ]
+
+        num_obstacles = random.randint(1,4)
+        static_obstacles = []
+        obstacles_info = []
+        for i in range(num_obstacles):
+            obs_pos_x = random.randint(130,375)
+            obs_pos_y = random.randint(130,470)
+            obs_size_x = random.randint(25,50)
+            obs_size_y = random.randint(25,50)
+            if obstacles_info is not None:
+                pass
+            obstacles_info.append([obs_pos_x, obs_pos_y, obs_size_x, obs_size_y])
+            static_obstacles.append(pymunk.Poly(static_body, ((obs_pos_x-obs_size_x,obs_pos_y-obs_size_y), (obs_pos_x+obs_size_x,obs_pos_y-obs_size_y), (obs_pos_x+obs_size_x, obs_pos_y+obs_size_y), (obs_pos_x-obs_size_x,obs_pos_y+obs_size_y))),)
+            
         for obstacle in static_obstacles:
             obstacle.elasticity = 0
             obstacle.friction = 1
             obstacle.collision_type = 1
             obstacle.filter = pymunk.ShapeFilter(categories=0b10)
-            obstacle.reward = -0.25
         self._space.add(*static_obstacles)
 
         static_border = [
@@ -259,8 +270,8 @@ class Nav_Obstacle_Env(object):
         state = self.state
         reward = robot_reward
         done = self._done
-        robot_distance = distance(self.initial_robot_pos, self._agent['robot'].position)
-        self.initial_robot_pos = self._agent['robot'].position
+        robot_distance = distance(self.initial_agent_pos, self._agent['robot'].position)
+        self.initial_agent_pos = self._agent['robot'].position
         ministeps = robot_distance / 0.25
         info = { # To match SAM
             'ministeps': ministeps,
