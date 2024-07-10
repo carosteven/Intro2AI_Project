@@ -69,10 +69,10 @@ class Nav_Obstacle_Env(object):
         # Rewards
         self.collision_penalty = 0.25
         self.obj_to_goal_reward = 1
-        self.partial_rewards_scale = 2
+        self.partial_rewards_scale = 0.5
 
         # Available actions
-        self.available_actions = ['w2_forward', 'w2_backward', 'w1_backward', 'w1_forward']
+        self.available_actions = ['forward', 'backward', 'turn_cw', 'turn_ccw']
 
         self.left_sensor_data = None
         self.right_sensor_data = None
@@ -231,7 +231,7 @@ class Nav_Obstacle_Env(object):
             # Calculate reward
             robot_reward = self.get_reward()
             self._agent['robot'].score += robot_reward
-            # print(self._agent['robot'].score, end='\r')
+            print(self._agent['robot'].score, end='\r')
             
             if self._done:
                 self.reset()
@@ -302,13 +302,13 @@ class Nav_Obstacle_Env(object):
                         self._actions('rot_ccw')
                 else:
                     if keys[pygame.K_UP]:
-                        self._actions('w2_forward')
+                        self._actions('forward')
                     elif keys[pygame.K_DOWN]:
-                        self._actions('w2_backward')
+                        self._actions('backward')
                     elif keys[pygame.K_LEFT]:
-                        self._actions('w1_backward')
+                        self._actions('turn_ccw')
                     elif keys[pygame.K_RIGHT]:
-                        self._actions('w1_forward')
+                        self._actions('turn_cw')
     
     def _update(self):
         # print(pymunk.ShapeFilter(mask=pymunk.ShapeFilter.ALL_MASKS()), pymunk.ShapeFilter(mask=pymunk.ShapeFilter.ALL_MASKS() ^ 0b10), end='\r')
@@ -371,25 +371,40 @@ class Nav_Obstacle_Env(object):
     
     def _actions(self, action) -> None:
         """
-        action: 'w2_forward', 'w2_backward', 'w1_backward', 'w1_forward'
+        action: 'forward', 'backward', 'turn_cw', 'turn_ccw'
         :return: None
         """
-        if action == 'w2_forward':
-            self._agent['wheel_2'].velocity += self._agent['wheel_2'].rotation_vector.perpendicular() * -50
-            self._agent['wheel_2'].latch = True
-            self._agent['wheel_2'].forward = True
-        elif action == 'w2_backward':
-            self._agent['wheel_2'].velocity += self._agent['wheel_2'].rotation_vector.perpendicular() * 50
-            self._agent['wheel_2'].latch = True
-            self._agent['wheel_2'].forward = False
-        elif action == 'w1_backward':
-            self._agent['wheel_1'].velocity += self._agent['wheel_1'].rotation_vector.perpendicular() * 50
-            self._agent['wheel_1'].latch = True
-            self._agent['wheel_1'].forward = False
-        elif action == 'w1_forward':
+        if action == 'forward':
             self._agent['wheel_1'].velocity += self._agent['wheel_1'].rotation_vector.perpendicular() * -50
             self._agent['wheel_1'].latch = True
             self._agent['wheel_1'].forward = True
+            self._agent['wheel_2'].velocity += self._agent['wheel_2'].rotation_vector.perpendicular() * -50
+            self._agent['wheel_2'].latch = True
+            self._agent['wheel_2'].forward = True
+
+        elif action == 'backward':
+            self._agent['wheel_1'].velocity += self._agent['wheel_1'].rotation_vector.perpendicular() * 50
+            self._agent['wheel_1'].latch = True
+            self._agent['wheel_1'].forward = False
+            self._agent['wheel_2'].velocity += self._agent['wheel_2'].rotation_vector.perpendicular() * 50
+            self._agent['wheel_2'].latch = True
+            self._agent['wheel_2'].forward = False
+
+        elif action == 'turn_cw':
+            self._agent['wheel_1'].velocity += self._agent['wheel_1'].rotation_vector.perpendicular() * -50
+            self._agent['wheel_1'].latch = True
+            self._agent['wheel_1'].forward = True
+            self._agent['wheel_2'].velocity += self._agent['wheel_2'].rotation_vector.perpendicular() * 50
+            self._agent['wheel_2'].latch = True
+            self._agent['wheel_2'].forward = False
+
+        elif action == 'turn_ccw':
+            self._agent['wheel_1'].velocity += self._agent['wheel_1'].rotation_vector.perpendicular() * 50
+            self._agent['wheel_1'].latch = True
+            self._agent['wheel_1'].forward = False
+            self._agent['wheel_2'].velocity += self._agent['wheel_2'].rotation_vector.perpendicular() * -50
+            self._agent['wheel_2'].latch = True
+            self._agent['wheel_2'].forward = True
 
     def collision_begin(self, arbiter, space, dummy):
         shapes = arbiter.shapes

@@ -1,20 +1,19 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle
-from wheeled_robot_env import Wheeled_Robot_Sim
+from nav_obstacle_env import Nav_Obstacle_Env
 
-sim = Wheeled_Robot_Sim()
-available_act = sim.available_act
+env = Nav_Obstacle_Env()
 gamma = 0.8
 epsilon = 0.1
-DEFAULT_ACT = available_act[0]
+DEFAULT_ACT = env.available_actions[0]
 train = True
 continue_training = False
 # global new_state
 # is_new_state = True
 
 def init_Q_n(Q, n, s):
-    for a in available_act:
+    for a in env.available_actions:
         Q[(s, a)] = -1
         n[(s, a)] = 0
     # global is_new_state
@@ -23,8 +22,8 @@ def init_Q_n(Q, n, s):
 
 def policy(Q, s):
     # Find argmax_a from Q
-    rewards = [Q[(s, i)] for i in available_act]
-    best_actions = [available_act[i[0]] for i in np.argwhere(rewards == np.amax(rewards))]
+    rewards = [Q[(s, i)] for i in env.available_actions]
+    best_actions = [env.available_actions[i[0]] for i in np.argwhere(rewards == np.amax(rewards))]
     best_action = np.random.choice(best_actions)
     return best_action
 
@@ -32,7 +31,7 @@ def sample_next_action(Q, s):
     method = np.random.choice(['exploration', 'exploitation'], p=[epsilon, 1-epsilon])
 
     if method == 'exploration':
-        next_action = np.random.choice(available_act)
+        next_action = np.random.choice(env.available_actions)
 
     elif method == 'exploitation':
         next_action = policy(Q, s)
@@ -40,17 +39,17 @@ def sample_next_action(Q, s):
     return next_action
 
 def get_state():
-    # position = (round(sim._agent['robot'].center().x/2.0)*2, round(sim._agent['robot'].center().y/2.0)*2)
-    '''if sim.left_sensor_data is None and sim.right_sensor_data is None:
+    # position = (round(env._agent['robot'].center().x/2.0)*2, round(env._agent['robot'].center().y/2.0)*2)
+    '''if env.left_sensor_data is None and env.right_sensor_data is None:
         sensor = ('safe', 'safe')
-    for sens in [sim.left_sensor_data, sim.right_sensor_data]:
+    for sens in [env.left_sensor_data, env.right_sensor_data]:
             if sens is not None:
                 sensor = round(sens[2])'''
-    sensor = (round(sim.left_sensor_data[2]/3)*3 if sim.left_sensor_data is not None else 'safe', round(sim.right_sensor_data[2]/3)*3 if sim.right_sensor_data is not None else 'safe')
+    sensor = (round(env.left_sensor_data[2]/3)*3 if env.left_sensor_data is not None else 'safe', round(env.right_sensor_data[2]/3)*3 if env.right_sensor_data is not None else 'safe')
 
-    velocity = round(sim._agent['robot'].velocity.length/5.0)*5
-    # velocity = (round(sim._agent['robot'].velocity.x/10.0)*10, round(sim._agent['robot'].velocity.y/10.0)*10)
-    direction = (round(sim._agent['robot'].rotation_vector.perpendicular().x), round(sim._agent['robot'].rotation_vector.perpendicular().y))
+    velocity = round(env._agent['robot'].velocity.length/5.0)*5
+    # velocity = (round(env._agent['robot'].velocity.x/10.0)*10, round(env._agent['robot'].velocity.y/10.0)*10)
+    direction = (round(env._agent['robot'].rotation_vector.perpendicular().x), round(env._agent['robot'].rotation_vector.perpendicular().y))
 
     state = []
     state.append(velocity)
@@ -65,14 +64,14 @@ def train_model(epochs=1, Q={}, n={}):
 
     for epoch in range(epochs):
         score = 0
-        sim.__init__()
+        env.__init__()
         # Loop unitl reaches goal
-        while sim._running:
+        while not env._done:
             # global is_new_state
             '''
             if is_new_state:
                 print("                                                                                ", end='\r')
-                print(f"Epoch: {epoch}, Score: {sim._agent['robot'].score}   new state", end='\r')
+                print(f"Epoch: {epoch}, Score: {env._agent['robot'].score}   new state", end='\r')
                 is_new_state = False
             else:
                 print("                                                                                ", end='\r')
@@ -80,7 +79,7 @@ def train_model(epochs=1, Q={}, n={}):
             print(f"Epoch: {epoch}, Score: {score}", end='\r')
 
             current_state = get_state()
-            score = round(sim._agent['robot'].score, 2)
+            score = round(env._agent['robot'].score, 2)
 
             # Initialize Q and n (if necessary)
             if Q.get((current_state, DEFAULT_ACT)) == None:
@@ -88,12 +87,12 @@ def train_model(epochs=1, Q={}, n={}):
 
             # Select action a and execute it
             action = sample_next_action(Q, current_state)
-            sim._actions(action)
-            sim.run_controlled()
+            # env._actions(action)
+            env.step(action)
 
             # Observe s' and r
             new_state = get_state()
-            r = round(sim._agent['robot'].score, 2) - score
+            r = round(env._agent['robot'].score, 2) - score
 
             # Initialize Q and n (if necessary)
             if Q.get((new_state, DEFAULT_ACT)) == None:
@@ -106,7 +105,7 @@ def train_model(epochs=1, Q={}, n={}):
             a = 1 / (n[(current_state, action)])
 
             # Update Q-value
-            next_rewards = [Q[(new_state, i)] for i in available_act]
+            next_rewards = [Q[(new_state, i)] for i in env.available_actions]
             Q[(current_state, action)] = Q[(current_state, action)] + a*(r + gamma*max(next_rewards) - Q[(current_state, action)])
         print('\n', end='\r')
 
@@ -127,29 +126,28 @@ def train_model(epochs=1, Q={}, n={}):
     return [Q, n]
 
 def test_model(Q_actual, n_actual):
-    sim.__init__()
-    input()
+    env.__init__()
     Q = Q_actual
     n = n_actual
 
-    while sim._running:
-        sim.run_controlled()
+    while env._running:
+        # env.step()
         '''
         if new_state:
             print("                                                                                ", end='\r')
-            print(f"Score: {sim._agent['robot'].score}   new state", end='\r')
+            print(f"Score: {env._agent['robot'].score}   new state", end='\r')
             new_state = False
         else:
             print("                                                                                ", end='\r')
         '''
-        print(f"Score: {round(sim._agent['robot'].score, 2)}", end='\r')
+        print(f"Score: {round(env._agent['robot'].score, 2)}", end='\r')
 
         current_state = get_state()
         if Q.get((current_state, DEFAULT_ACT)) == None:
                 Q, n = init_Q_n(Q, n, current_state)
         
         action = policy(Q, current_state)
-        sim._actions(action)
+        env.step(action)
 
 
 train = False
@@ -170,9 +168,8 @@ if train == True:
     f.close()
 
 else:
-    f = open('Q - Wheeled.pckl', 'rb')
+    f = open('Q.pckl', 'rb')
     Q, n = pickle.load(f)
     f.close()
-    print(len(Q))
     test_model(Q, n)
 
