@@ -6,8 +6,9 @@ import pymunk
 import pymunk.pygame_util
 import numpy as np
 from numpy import pi
+from skimage.transform import rescale
 
-# random.seed(1)
+random.seed(2)
 
 def limit_velocity(body, gravity, damping, dt):
         max_velocity = 100
@@ -38,11 +39,10 @@ class Nav_Obstacle_Env(object):
         self._physics_steps_per_frame = 1
 
         # pygame
-        # pygame.init()
         pygame.display.init()
         pygame.font.init()
-        screen_size = (600,600)
-        self._screen = pygame.display.set_mode(screen_size)
+        self.screen_size = (600,600)
+        self._screen = pygame.display.set_mode(self.screen_size)
         self._clock = pygame.time.Clock()
 
         self._draw_options = pymunk.pygame_util.DrawOptions(self._screen)
@@ -52,13 +52,11 @@ class Nav_Obstacle_Env(object):
         self._add_static_scenery()
 
         # The agent to be controlled
-        agent_y_pos = random.randint(50,550)
-        self._agent = self._create_agent(vertices=((-25,-25), (-25,25), (25,25), (25,-25)), mass=10, position=(450, agent_y_pos), damping=0.99)
-        for key in self._agent:
-            self._agent[key].score = 0
+        agent_y_pos = random.randint(50,self.screen_size[1]-50)
+        self._agent = self._create_agent(vertices=((-25,-25), (-25,25), (25,25), (25,-25)), mass=10, position=(self.screen_size[0]*0.75, agent_y_pos), damping=0.99)
 
         if self.state_type == 'vision':
-            self.state = np.zeros((1, screen_size[0], screen_size[1])).astype(int)
+            self.state = np.zeros((1, self.screen_size[0], self.screen_size[1])).astype(int)
             self.get_vision_state()
         else:
             self.left_sensor_data = self._space.point_query_nearest(point=self._agent['robot'].local_to_world((-25, -25)), max_distance=30, shape_filter=pymunk.ShapeFilter(mask=pymunk.ShapeFilter.ALL_MASKS() ^ 0b101))
@@ -66,9 +64,13 @@ class Nav_Obstacle_Env(object):
             self.state = np.zeros((1,2))
             self.get_state()
 
+        # Agent cumulative rewards
+        self.reward = 0
+        self.reward_from_last_action = 0
+
         # Rewards
         self.collision_penalty = 0.25
-        self.obj_to_goal_reward = 1
+        self.goal_reward = 1
         self.partial_rewards_scale = 0.5
 
         # Available actions
@@ -76,7 +78,6 @@ class Nav_Obstacle_Env(object):
 
         self.left_sensor_data = None
         self.right_sensor_data = None
-        self.distance_to_goal = [600, 600]
 
         self.goal_position = (25,75)
         self.initial_agent_dist = distance(self._agent['robot'].position, self.goal_position)
@@ -111,7 +112,7 @@ class Nav_Obstacle_Env(object):
             obs_size_x = random.randint(25,50)
             obs_size_y = random.randint(25,50)
             if obstacles_info is not None:
-                pass
+                pass #TODO
             obstacles_info.append([obs_pos_x, obs_pos_y, obs_size_x, obs_size_y])
             static_obstacles.append(pymunk.Poly(static_body, ((obs_pos_x-obs_size_x,obs_pos_y-obs_size_y), (obs_pos_x+obs_size_x,obs_pos_y-obs_size_y), (obs_pos_x+obs_size_x, obs_pos_y+obs_size_y), (obs_pos_x-obs_size_x,obs_pos_y+obs_size_y))),)
             
@@ -132,7 +133,6 @@ class Nav_Obstacle_Env(object):
             line.elasticity = 0.95
             line.friction = 0.9
             line.collision_type = 1
-            line.reward = -0.25
             line.filter = pymunk.ShapeFilter(categories=0b10)
         self._space.add(*static_border)
 
@@ -143,10 +143,8 @@ class Nav_Obstacle_Env(object):
 
 
         static_goal[0].color = (0, 255, 0, 255)
-        static_goal[0].reward = 1
         static_goal[0].collision_type = 2
         static_goal[0].filter = pymunk.ShapeFilter(categories=0b101)
-        # static_goal[0].filter = pymunk.ShapeFilter(categories=0b1)
 
         self._space.add(*static_goal)
 
@@ -213,8 +211,9 @@ class Nav_Obstacle_Env(object):
             # Progress time forward
             for x in range(self._physics_steps_per_frame):
                 self._space.step(self._dt)
-            # print(self._agent['robot'].score, end='\r')
-            self._process_events()
+
+            action = self._process_events()
+            self._actions(action)
             self._update()
             self._clear_screen()
             self._draw_objects()
@@ -228,10 +227,12 @@ class Nav_Obstacle_Env(object):
             self._clock.tick(110)
             pygame.display.set_caption("fps: " + str(self._clock.get_fps()))
 
+            if action is not None:
+                self.reward +=  self.reward_from_last_action
+                self.reward_from_last_action = 0
+            
             # Calculate reward
-            robot_reward = self.get_reward()
-            self._agent['robot'].score += robot_reward
-            print(self._agent['robot'].score, end='\r')
+            self.reward_from_last_action += self.get_reward(True if action is not None else False)
             
             if self._done:
                 self.reset()
@@ -262,31 +263,35 @@ class Nav_Obstacle_Env(object):
         self._clock.tick(230)
         pygame.display.set_caption("fps: " + str(self._clock.get_fps()))
 
+        if action is not None:
+            self.reward += self.reward_from_last_action
+            self.reward_from_last_action = 0
+
         # Calculate reward
-        robot_reward = self.get_reward()
-        self._agent['robot'].score += robot_reward
+        self.reward_from_last_action += self.get_reward(True if action is not None else False)
 
         # Items to return
         state = self.state
-        reward = robot_reward
+        reward = self.reward_from_last_action
         done = self._done
-        robot_distance = distance(self.initial_agent_pos, self._agent['robot'].position)
-        self.initial_agent_pos = self._agent['robot'].position
-        ministeps = robot_distance / 0.25
+        # robot_distance = distance(self.initial_agent_pos, self._agent['robot'].position)
+        # self.initial_agent_pos = self._agent['robot'].position
+        # ministeps = robot_distance / 0.25
         info = { # To match SAM
-            'ministeps': ministeps,
+            # 'ministeps': ministeps,
             'inactivity': None,
             'cumulative_cubes': 0,
             'cumulative_distance': 0,
-            'cumulative_reward': self._agent['robot'].score
+            'cumulative_reward': self.reward
         }
         return state, reward, done, info
 
-    def _process_events(self) -> None:
+    def _process_events(self) -> str:
         """
         Handle game and events like keyboard input. Call once per frame only.
-        :return: None
+        :return: action
         """
+        action = None
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self._running = False
@@ -295,27 +300,24 @@ class Nav_Obstacle_Env(object):
 
             elif event.type == pygame.KEYDOWN:
                 keys = pygame.key.get_pressed()
-                if keys[pygame.K_LSHIFT] or keys[pygame.K_RSHIFT]:
-                    if keys[pygame.K_RIGHT]:
-                        self._actions('rot_cw')
-                    elif keys[pygame.K_LEFT]:
-                        self._actions('rot_ccw')
-                else:
-                    if keys[pygame.K_UP]:
-                        self._actions('forward')
-                    elif keys[pygame.K_DOWN]:
-                        self._actions('backward')
-                    elif keys[pygame.K_LEFT]:
-                        self._actions('turn_ccw')
-                    elif keys[pygame.K_RIGHT]:
-                        self._actions('turn_cw')
+                if keys[pygame.K_UP]:
+                    # self._actions('forward')
+                    action = 'forward'
+                elif keys[pygame.K_DOWN]:
+                    # self._actions('backward')
+                    action = 'backward'
+                elif keys[pygame.K_LEFT]:
+                    # self._actions('turn_ccw')
+                    action = 'turn_ccw'
+                elif keys[pygame.K_RIGHT]:
+                    # self._actions('turn_cw')
+                    action = 'turn_cw'
+        return action
     
     def _update(self):
         # print(pymunk.ShapeFilter(mask=pymunk.ShapeFilter.ALL_MASKS()), pymunk.ShapeFilter(mask=pymunk.ShapeFilter.ALL_MASKS() ^ 0b10), end='\r')
         self.left_sensor_data = self._space.point_query_nearest(point=self._agent['robot'].local_to_world((-25, -25)), max_distance=30, shape_filter=pymunk.ShapeFilter(mask=pymunk.ShapeFilter.ALL_MASKS() ^ 0b101))
         self.right_sensor_data = self._space.point_query_nearest(point=self._agent['robot'].local_to_world((25, -25)), max_distance=30, shape_filter=pymunk.ShapeFilter(mask=pymunk.ShapeFilter.ALL_MASKS() ^ 0b101))
-        self.distance_to_goal[0] = self._space.point_query_nearest(point=self._agent['robot'].local_to_world((0, 0)), max_distance=1200, shape_filter=pymunk.ShapeFilter(mask=pymunk.ShapeFilter.ALL_MASKS() ^ 0b11))[2]
-        self.distance_to_goal[1] = self.distance_to_goal[0]
 
         for sensor in [self.left_sensor_data, self.right_sensor_data]:
             if sensor is not None:
@@ -448,21 +450,27 @@ class Nav_Obstacle_Env(object):
         y_idx_high = y_high-y_low if y_high == 600 else 200
         y_idx_low = 200-y_high if y_low == 0 else 0
         
-        self.state = np.zeros((1,200,200))
-        self.state[0,x_idx_low:x_idx_high, y_idx_low:y_idx_high] = np.array(self.pxarr[x_low:x_high,y_low:y_high]).astype('uint8')
+        # self.state = np.zeros((1,200,200))
+        # self.state[0,x_idx_low:x_idx_high, y_idx_low:y_idx_high] = np.array(self.pxarr[x_low:x_high,y_low:y_high]).astype('uint8')
+        self.state = np.array(self.pxarr).astype('uint8').transpose()
+        self.state = np.resize(rescale(self.state, 0.5)*255, (1,int(self.screen_size[0]-2),int(self.screen_size[1]/2)))
 
-    def get_reward(self):
+    def get_reward(self, action_taken: bool):
         """
         Penalty for collision with walls
         Reward for pushing object into goal
         Partial reward/penalty for pushing object closer to / further from goal
         """
         reward = 0
+        if action_taken:
+            # reward -= self.action_penalty
+            pass
+
         if self.collision_occuring:
             reward -= self.collision_penalty
         
         if self._done:
-            reward += self.obj_to_goal_reward
+            reward += self.goal_reward
 
         dist = distance(self._agent['robot'].position, self.goal_position)
         dist_moved = self.initial_agent_dist - dist
@@ -472,9 +480,11 @@ class Nav_Obstacle_Env(object):
         return reward
     
     def reset(self):
-        cumulative_reward = self._agent['robot'].score
+        cumulative_reward = self.reward
+        reward_from_last_action = self.reward_from_last_action
         self.__init__(state_type=self.state_type)
-        self._agent['robot'].score = cumulative_reward
+        self.reward = cumulative_reward
+        self.reward_from_last_action = reward_from_last_action
         return self.state
     
     def close(self):
