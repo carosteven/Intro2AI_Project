@@ -6,6 +6,10 @@ from itertools import count
 from time import time
 from nav_obstacle_env import Nav_Obstacle_Env
 
+import logging
+logging.getLogger('pymunk').propagate = False
+logging.basicConfig(filename='ql.log',level=logging.DEBUG)
+
 env = Nav_Obstacle_Env()
 gamma = 0.8
 epsilon = 0.1
@@ -53,6 +57,7 @@ def get_state():
 def train_model(epochs=1, Q={}, n={}):
     reward_stats = []
     time_stats = []
+    logging.info("Training Started")
     for epoch in tqdm(range(epochs)):
         reward_stats.append(0)
         time_stats.append(time())
@@ -66,6 +71,7 @@ def train_model(epochs=1, Q={}, n={}):
         epi = 0
         done = False
         # Loop unitl reaches goal
+        # for frame in tqdm(range(100000)):
         for frame in count():
             if frame % action_freq == 0:
                 action = env.available_actions[sample_next_action(Q, state)]
@@ -95,7 +101,6 @@ def train_model(epochs=1, Q={}, n={}):
                 
                 state = next_state
                 
-
             else:
                 env.step(None)
             
@@ -103,6 +108,7 @@ def train_model(epochs=1, Q={}, n={}):
                 break
 
         time_stats[-1] = time() - time_stats[-1]
+        logging.info(f"Epoch {epoch} complete. Time: {time_stats[-1]} Reward: {reward_stats[-1]}")
         f = open('Q.pckl', 'wb')
         pickle.dump([Q, n, reward_stats, time_stats], f)
         f.close()

@@ -425,13 +425,19 @@ class Nav_Obstacle_Env(object):
         return True
     
     def get_state(self):
-        """left/right sensor data and direction (angle in rad)"""
+        """velocity, left/right sensor data, and direction (angle in rad)"""
         state = []
+        # Velocity
+        state.append(self._agent['robot'].velocity.length)
+
+        # Sensors
         for sensor in [self.left_sensor_data, self.right_sensor_data]:
             if sensor is not None:
                 state.append(sensor[2])
             else:
                 state.append(100)
+
+        # Direction
         state.append(self._agent['robot'].angle%(2*pi))
         self.state = np.array(state)
     
