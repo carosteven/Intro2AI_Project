@@ -70,7 +70,6 @@ class Nav_Obstacle_Env(object):
 
         # Rewards
         self.collision_penalty = 2
-        self.action_penalty = 0
         self.goal_reward = 10
         self.partial_rewards_scale = 1
 

@@ -279,7 +279,7 @@ class Train_DQL():
     
 
 def main(state_type, model, checkpoint_path, checkpoint_interval, num_epoch=100, batch_size=128):
-    logging.basicConfig(filename=f'dqn_{state_type}.log',level=logging.DEBUG)
+    logging.basicConfig(filename=f'dqn_{state_type}_novel.log',level=logging.DEBUG)
     
     logging.info("starting training script")
 
@@ -299,5 +299,5 @@ def main(state_type, model, checkpoint_path, checkpoint_interval, num_epoch=100,
 
 
 if __name__ == "__main__":
-    state_type = 'vision'
-    main(state_type, 'resnet', f'/h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_{state_type}.pt', 3000)
+    state_type = 'sensor'
+    main(state_type, 'resnet', f'/h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_{state_type}_novel.pt', 3000)

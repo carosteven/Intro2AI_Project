@@ -11,8 +11,8 @@ logging.getLogger('pymunk').propagate = False
 logging.basicConfig(filename='ql.log',level=logging.DEBUG)
 
 env = Nav_Obstacle_Env()
-gamma = 0.8
 epsilon = 0.1
+gamma = 0.8
 action_freq = 25
 DEFAULT_ACT = env.available_actions[0]
 train = False
@@ -48,15 +48,15 @@ def get_state():
     direction = (round(env._agent['robot'].rotation_vector.perpendicular().x), round(env._agent['robot'].rotation_vector.perpendicular().y))
 
     state = []
-    state.append(velocity)
+    # state.append(velocity)
     for stat in [sensor, direction]:
         for coord in stat:
             state.append(coord)
     return tuple(state)
 
-def train_model(epochs=1, Q={}, n={}):
-    reward_stats = []
-    time_stats = []
+def train_model(epochs=1, Q={}, n={}, reward_stats=[], time_stats=[]):
+    # reward_stats = []
+    # time_stats = []
     logging.info("Training Started")
     for epoch in tqdm(range(epochs)):
         reward_stats.append(0)
@@ -83,7 +83,7 @@ def train_model(epochs=1, Q={}, n={}):
                 # Observe s' and r
                 _, reward, done, _ = env.step(None)
                 reward_stats[-1] += reward
-                print(reward_stats[-1])
+                print(reward_stats[-1], end='\r')
                 next_state = get_state()
 
                 # Initialize Q and n (if necessary)
@@ -141,17 +141,20 @@ train = False
 if train == True:
     if continue_training == True:
         f = open('Q.pckl', 'rb')
-        Q, n = pickle.load(f)
+        Q, n, r, t = pickle.load(f)
         f.close()
+        logging.info("Resuming training...")
 
     else:
         Q = {}
         n = {}
+        r = []
+        t = []
 
-    Q, n = train_model(100, Q, n)
-    f = open('Q.pckl', 'wb')
-    pickle.dump([Q, n], f)
-    f.close()
+    Q, n = train_model(100, Q, n, r, t)
+    # f = open('Q.pckl', 'wb')
+    # pickle.dump([Q, n], f)
+    # f.close()
 
 else:
     f = open('Q_old.pckl', 'rb')
