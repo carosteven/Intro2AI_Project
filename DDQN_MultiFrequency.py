@@ -117,7 +117,7 @@ class Train_DQL():
             logging.info("No checkpoint detected, starting from initial state")
 
     def commit_state(self, ts, rs):
-        temp_path = os.path.join(os.path.dirname(self.checkpoint_path), f"temp_{self.state_type}.pt")
+        temp_path = os.path.join(os.path.dirname(self.checkpoint_path), f"temp_multi.pt")
         training_state = {
             'policy_lo_state_dict' : self.policy_net_lo.state_dict(),
             'target_lo_state_dict' : self.target_net_lo.state_dict(),
@@ -280,8 +280,8 @@ class Train_DQL():
                             self.next_state = torch.tensor(observation, dtype=torch.float32, device=self.device).unsqueeze(0)
                         reward_hi += reward
                         
-                        reward = torch.tensor([reward], device=self.device)
-                        self.memory_lo.push(self.state, self.action, self.next_state, reward)
+                        r = torch.tensor([reward], device=self.device)
+                        self.memory_lo.push(self.state, self.action, self.next_state, r)
                         if total_actions % self.low_to_high_freq == self.low_to_high_freq - 1:
                             reward_hi = torch.tensor([reward], device=self.device)
                             self.memory_hi.push(state_hi, action_hi, self.next_state, reward_hi)
@@ -313,7 +313,7 @@ class Train_DQL():
     
 
 def main(state_type, model, checkpoint_path, checkpoint_interval, num_epoch=100, batch_size=128):
-    logging.basicConfig(filename=f'dqn_multi.log',level=logging.DEBUG)
+    logging.basicConfig(filename=f'dqn_multi_novel.log',level=logging.DEBUG)
     
     logging.info("starting training script")
 
@@ -334,4 +334,4 @@ def main(state_type, model, checkpoint_path, checkpoint_interval, num_epoch=100,
 
 if __name__ == "__main__":
     state_type = 'sensor'
-    main(state_type, 'resnet', f'/h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi.pt', 3000)
+    main(state_type, 'resnet', f'/h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt', 3000)

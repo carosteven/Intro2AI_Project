@@ -69,9 +69,9 @@ class Nav_Obstacle_Env(object):
         self.reward_from_last_action = 0
 
         # Rewards
-        self.collision_penalty = 0.25
-        self.goal_reward = 1
-        self.partial_rewards_scale = 0.5
+        self.collision_penalty = 2
+        self.goal_reward = 10
+        self.partial_rewards_scale = 1
 
         # Available actions
         self.available_actions = ['forward', 'backward', 'turn_cw', 'turn_ccw']
@@ -428,7 +428,7 @@ class Nav_Obstacle_Env(object):
         """velocity, left/right sensor data, and direction (angle in rad)"""
         state = []
         # Velocity
-        state.append(self._agent['robot'].velocity.length)
+        # state.append(self._agent['robot'].velocity.length)
 
         # Sensors
         for sensor in [self.left_sensor_data, self.right_sensor_data]:
