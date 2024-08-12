@@ -1,0 +1,357 @@
+INFO:root:starting training script
+INFO:root:No checkpoint detected, starting from initial state
+INFO:root:Epoch 0
+INFO:root:starting training script
+INFO:root:No checkpoint detected, starting from initial state
+INFO:root:Epoch 0
+INFO:root:Epoch 0 complete. Time: 756.4233758449554 Reward: -4867.262113489808
+INFO:root:2024-08-09 11:18:07: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 1
+INFO:root:Epoch 1 complete. Time: 101.09455728530884 Reward: -0.9598768879646684
+INFO:root:2024-08-09 11:19:50: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 2
+INFO:root:Epoch 0 complete. Time: 961.9921402931213 Reward: -5131.416169741137
+INFO:root:2024-08-09 11:21:46: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 1
+INFO:root:Epoch 2 complete. Time: 133.6405463218689 Reward: -1337.6429501046803
+INFO:root:2024-08-09 11:22:06: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 3
+INFO:root:Epoch 3 complete. Time: 308.0490825176239 Reward: -1804.9033238500526
+INFO:root:2024-08-09 11:27:16: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 4
+INFO:root:Epoch 1 complete. Time: 432.2060487270355 Reward: -9387.41596820346
+INFO:root:2024-08-09 11:29:02: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 2
+INFO:root:Epoch 2 complete. Time: 96.53285622596741 Reward: 455.0915611775263
+INFO:root:2024-08-09 11:30:41: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 3
+INFO:root:Epoch 3 complete. Time: 83.06474804878235 Reward: 264.77300981714416
+INFO:root:2024-08-09 11:32:07: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 4
+INFO:root:Epoch 4 complete. Time: 304.20648407936096 Reward: -7823.223019818821
+INFO:root:2024-08-09 11:32:24: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 5
+INFO:root:Epoch 4 complete. Time: 93.95571613311768 Reward: 203.3504314108513
+INFO:root:2024-08-09 11:33:45: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 5
+INFO:root:Epoch 5 complete. Time: 139.13617944717407 Reward: -1058.8876138206733
+INFO:root:2024-08-09 11:34:47: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 6
+INFO:root:Epoch 6 complete. Time: 80.24791216850281 Reward: 152.398971634311
+INFO:root:2024-08-09 11:36:11: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 7
+INFO:root:Epoch 5 complete. Time: 177.3600537776947 Reward: -620.6976785276586
+INFO:root:2024-08-09 11:36:46: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 6
+INFO:root:Epoch 6 complete. Time: 159.98513197898865 Reward: -429.5299913205881
+INFO:root:2024-08-09 11:39:30: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 7
+INFO:root:Epoch 7 complete. Time: 275.0945715904236 Reward: -2132.7562796305524
+INFO:root:2024-08-09 11:40:51: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 8
+INFO:root:Epoch 7 complete. Time: 104.26128220558167 Reward: 503.39813291732435
+INFO:root:2024-08-09 11:41:18: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 8
+INFO:root:Epoch 8 complete. Time: 133.78608536720276 Reward: -153.7492116324177
+INFO:root:2024-08-09 11:43:09: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 9
+INFO:root:Epoch 8 complete. Time: 112.27283310890198 Reward: 552.1500592098441
+INFO:root:2024-08-09 11:43:15: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 9
+INFO:root:Epoch 9 complete. Time: 91.29261779785156 Reward: 433.18697844658686
+INFO:root:2024-08-09 11:44:51: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 10
+INFO:root:Epoch 9 complete. Time: 133.6885209083557 Reward: -90.72826442110915
+INFO:root:2024-08-09 11:45:27: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 10
+INFO:root:Epoch 10 complete. Time: 76.50492763519287 Reward: -114.66970226399627
+INFO:root:2024-08-09 11:46:48: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 11
+INFO:root:Epoch 10 complete. Time: 123.1360011100769 Reward: -876.8922432093377
+INFO:root:2024-08-09 11:46:58: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 11
+INFO:root:Epoch 11 complete. Time: 78.77671408653259 Reward: 561.341373983797
+INFO:root:2024-08-09 11:48:12: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 12
+INFO:root:Epoch 12 complete. Time: 62.49625205993652 Reward: 409.62719874541665
+INFO:root:2024-08-09 11:49:19: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 13
+INFO:root:Epoch 11 complete. Time: 425.52109003067017 Reward: -4056.8090165538474
+INFO:root:2024-08-09 11:54:08: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 12
+INFO:root:Epoch 13 complete. Time: 300.18744468688965 Reward: -1636.1160672028018
+INFO:root:2024-08-09 11:54:24: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 14
+INFO:root:Epoch 12 complete. Time: 83.30890083312988 Reward: 152.99003950884827
+INFO:root:2024-08-09 11:55:36: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 13
+INFO:root:Epoch 14 complete. Time: 124.24926280975342 Reward: -533.4718108395322
+INFO:root:2024-08-09 11:56:33: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 15
+INFO:root:Epoch 13 complete. Time: 57.37705731391907 Reward: 629.387688453048
+INFO:root:2024-08-09 11:56:38: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 14
+INFO:root:Epoch 14 complete. Time: 60.23849892616272 Reward: 535.7190143648469
+INFO:root:2024-08-09 11:57:43: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 15
+INFO:root:Epoch 15 complete. Time: 80.89958763122559 Reward: 392.72467039119545
+INFO:root:2024-08-09 11:57:58: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 16
+INFO:root:Epoch 15 complete. Time: 72.20249819755554 Reward: 511.6299046983268
+INFO:root:2024-08-09 11:58:59: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 16
+INFO:root:Epoch 16 complete. Time: 76.8815667629242 Reward: 393.67332728077236
+INFO:root:2024-08-09 11:59:20: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 17
+INFO:root:Epoch 17 complete. Time: 58.66608190536499 Reward: 508.701742313202
+INFO:root:2024-08-09 12:00:23: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 18
+INFO:root:Epoch 16 complete. Time: 92.38382935523987 Reward: 394.78886672835995
+INFO:root:2024-08-09 12:00:36: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 17
+INFO:root:Epoch 18 complete. Time: 99.53681635856628 Reward: -219.66269968695786
+INFO:root:Epoch 17 complete. Time: 88.52598166465759 Reward: 483.76692001360595
+INFO:root:2024-08-09 12:02:07: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 19
+INFO:root:Epoch 19 complete. Time: 65.82722854614258 Reward: -981.8937645009485
+INFO:root:2024-08-09 12:03:18: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 20
+INFO:root:Epoch 20 complete. Time: 94.7369430065155 Reward: -2317.19020518689
+INFO:root:2024-08-09 12:04:57: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 21
+INFO:root:Epoch 21 complete. Time: 90.82547950744629 Reward: 547.1360558034397
+INFO:root:2024-08-09 12:06:33: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 22
+INFO:root:Epoch 22 complete. Time: 57.80821418762207 Reward: 525.5370789998701
+INFO:root:2024-08-09 12:07:35: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 23
+INFO:root:Epoch 23 complete. Time: 43.935033321380615 Reward: 624.1271481098968
+INFO:root:2024-08-09 12:08:24: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 24
+INFO:root:Epoch 24 complete. Time: 36.75802826881409 Reward: 390.361524465509
+INFO:root:2024-08-09 12:09:05: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 25
+INFO:root:Epoch 25 complete. Time: 50.90289115905762 Reward: 691.6367571826356
+INFO:root:2024-08-09 12:10:01: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 26
+INFO:root:Epoch 26 complete. Time: 47.39681911468506 Reward: 21.171397588551095
+INFO:root:2024-08-09 12:10:53: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 27
+INFO:root:Epoch 27 complete. Time: 39.128191232681274 Reward: 614.8130426554993
+INFO:root:2024-08-09 12:11:36: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 28
+INFO:root:Epoch 28 complete. Time: 44.74168515205383 Reward: 559.1805886323762
+INFO:root:2024-08-09 12:12:26: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 29
+INFO:root:Epoch 29 complete. Time: 32.78795766830444 Reward: 575.1573069264529
+INFO:root:2024-08-09 12:13:03: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 30
+INFO:root:Epoch 30 complete. Time: 158.23915219306946 Reward: 172.97843485688628
+INFO:root:2024-08-09 12:15:46: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 31
+INFO:root:Epoch 31 complete. Time: 40.37801170349121 Reward: 507.1638553782768
+INFO:root:2024-08-09 12:16:31: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 32
+INFO:root:Epoch 32 complete. Time: 26.669721603393555 Reward: 553.2380983938651
+INFO:root:2024-08-09 12:17:02: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 33
+INFO:root:Epoch 33 complete. Time: 1131.3061456680298 Reward: -26056.436379850467
+INFO:root:2024-08-09 12:35:58: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 34
+INFO:root:Epoch 34 complete. Time: 17.10439443588257 Reward: 452.0013720956131
+INFO:root:2024-08-09 12:36:20: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 35
+INFO:root:Epoch 35 complete. Time: 87.8489944934845 Reward: -8226.684732559615
+INFO:root:2024-08-09 12:37:53: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 36
+INFO:root:Epoch 36 complete. Time: 36.392983198165894 Reward: 500.96022301065636
+INFO:root:2024-08-09 12:38:34: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 37
+INFO:root:Epoch 37 complete. Time: 18.487060546875 Reward: 457.44067176258693
+INFO:root:2024-08-09 12:38:57: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 38
+INFO:root:Epoch 38 complete. Time: 58.56570243835449 Reward: 497.2669671629752
+INFO:root:2024-08-09 12:40:00: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 39
+INFO:root:Epoch 39 complete. Time: 44.49673628807068 Reward: 402.73348948412655
+INFO:root:2024-08-09 12:40:49: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 40
+INFO:root:Epoch 40 complete. Time: 58.59357142448425 Reward: 462.4761837996732
+INFO:root:2024-08-09 12:41:52: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 41
+INFO:root:Epoch 41 complete. Time: 30.3076229095459 Reward: 464.1078397649175
+INFO:root:2024-08-09 12:42:27: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 42
+INFO:root:Epoch 42 complete. Time: 49.50308156013489 Reward: -461.86766677726126
+INFO:root:2024-08-09 12:43:22: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 43
+INFO:root:Epoch 43 complete. Time: 66.78600358963013 Reward: -3878.057269743906
+INFO:root:2024-08-09 12:44:33: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 44
+INFO:root:Epoch 44 complete. Time: 89.33004522323608 Reward: 131.42196996981346
+INFO:root:2024-08-09 12:46:07: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 45
+INFO:root:Epoch 45 complete. Time: 82.88561224937439 Reward: -613.0684892777203
+INFO:root:2024-08-09 12:47:35: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 46
+INFO:root:Epoch 46 complete. Time: 39.289811849594116 Reward: -143.96514816702415
+INFO:root:2024-08-09 12:48:18: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 47
+INFO:root:Epoch 47 complete. Time: 28.525824308395386 Reward: 490.5475298413819
+INFO:root:2024-08-09 12:48:52: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 48
+INFO:root:Epoch 48 complete. Time: 29.287928819656372 Reward: 428.27271213227243
+INFO:root:2024-08-09 12:49:26: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 49
+INFO:root:Epoch 49 complete. Time: 69.81273579597473 Reward: -58.610885272106245
+INFO:root:2024-08-09 12:50:40: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 50
+INFO:root:Epoch 50 complete. Time: 45.2757682800293 Reward: -433.32444481779555
+INFO:root:2024-08-09 12:51:30: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 51
+INFO:root:Epoch 51 complete. Time: 24.746084928512573 Reward: 389.09279747678954
+INFO:root:2024-08-09 12:51:59: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 52
+INFO:root:Epoch 52 complete. Time: 37.69793462753296 Reward: 46.624240925269916
+INFO:root:2024-08-09 12:52:42: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 53
+INFO:root:Epoch 53 complete. Time: 40.11899423599243 Reward: 522.8070140125977
+INFO:root:2024-08-09 12:53:26: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 54
+INFO:root:Epoch 54 complete. Time: 46.56879639625549 Reward: -95.51429977052328
+INFO:root:2024-08-09 12:54:17: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 55
+INFO:root:Epoch 55 complete. Time: 35.25196933746338 Reward: -47.48650018936098
+INFO:root:2024-08-09 12:54:57: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 56
+INFO:root:Epoch 56 complete. Time: 70.32802248001099 Reward: -3855.1394283405584
+INFO:root:2024-08-09 12:56:12: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 57
+INFO:root:Epoch 57 complete. Time: 55.32736849784851 Reward: -825.9720029515563
+INFO:root:2024-08-09 12:57:12: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 58
+INFO:root:Epoch 58 complete. Time: 74.07467031478882 Reward: -2145.72978842332
+INFO:root:2024-08-09 12:58:31: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 59
+INFO:root:Epoch 59 complete. Time: 35.6396598815918 Reward: 492.00327002460926
+INFO:root:2024-08-09 12:59:11: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 60
+INFO:root:Epoch 60 complete. Time: 13.935021877288818 Reward: 472.8841594315634
+INFO:root:2024-08-09 12:59:30: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 61
+INFO:root:Epoch 61 complete. Time: 29.549522876739502 Reward: 448.3656416350755
+INFO:root:2024-08-09 13:00:04: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 62
+INFO:root:Epoch 62 complete. Time: 31.07730007171631 Reward: 347.1470488074968
+INFO:root:2024-08-09 13:00:40: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 63
+INFO:root:Epoch 63 complete. Time: 63.59906315803528 Reward: 422.6943492034431
+INFO:root:2024-08-09 13:01:48: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 64
+INFO:root:Epoch 64 complete. Time: 103.91528105735779 Reward: -41.251268744488286
+INFO:root:2024-08-09 13:03:36: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 65
+INFO:root:Epoch 65 complete. Time: 16.842716217041016 Reward: 534.9487163719557
+INFO:root:2024-08-09 13:03:58: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 66
+INFO:root:Epoch 66 complete. Time: 61.776752948760986 Reward: 596.5742218422705
+INFO:root:2024-08-09 13:05:04: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 67
+INFO:root:Epoch 67 complete. Time: 42.88875603675842 Reward: 511.70818228749346
+INFO:root:2024-08-09 13:05:52: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 68
+INFO:root:Epoch 68 complete. Time: 49.83023118972778 Reward: 581.1251943208404
+INFO:root:2024-08-09 13:06:46: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 69
+INFO:root:Epoch 69 complete. Time: 31.87573504447937 Reward: 47.476537037561016
+INFO:root:2024-08-09 13:07:23: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 70
+INFO:root:Epoch 70 complete. Time: 48.556013345718384 Reward: 722.4722011539218
+INFO:root:2024-08-09 13:08:16: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 71
+INFO:root:Epoch 71 complete. Time: 15.415974378585815 Reward: 602.6489977067343
+INFO:root:2024-08-09 13:08:36: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 72
+INFO:root:Epoch 72 complete. Time: 30.87718963623047 Reward: 544.9933102327622
+INFO:root:2024-08-09 13:09:11: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 73
+INFO:root:Epoch 73 complete. Time: 65.16333198547363 Reward: -57.09168932405805
+INFO:root:2024-08-09 13:10:21: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 74
+INFO:root:Epoch 74 complete. Time: 19.133826971054077 Reward: 592.4318768645603
+INFO:root:2024-08-09 13:10:45: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 75
+INFO:root:Epoch 75 complete. Time: 20.919671773910522 Reward: 585.5519746970399
+INFO:root:2024-08-09 13:11:10: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 76
+INFO:root:Epoch 76 complete. Time: 15.436324119567871 Reward: 533.6008481699797
+INFO:root:2024-08-09 13:11:30: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 77
+INFO:root:Epoch 77 complete. Time: 19.360980987548828 Reward: 494.66455222874635
+INFO:root:2024-08-09 13:11:54: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 78
+INFO:root:Epoch 78 complete. Time: 12.929844379425049 Reward: 350.64190137408775
+INFO:root:2024-08-09 13:12:12: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 79
+INFO:root:Epoch 79 complete. Time: 2179.44579744339 Reward: -6547.846580591801
+INFO:root:2024-08-09 13:48:36: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 80
+INFO:root:Epoch 80 complete. Time: 274.5279951095581 Reward: -4733.727911762491
+INFO:root:2024-08-09 13:53:15: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 81
+INFO:root:Epoch 81 complete. Time: 27.432477474212646 Reward: 408.44290626953233
+INFO:root:2024-08-09 13:53:47: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 82
+INFO:root:Epoch 82 complete. Time: 76.47184896469116 Reward: 398.723011913818
+INFO:root:2024-08-09 13:55:08: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 83
+INFO:root:Epoch 83 complete. Time: 58.24023509025574 Reward: -417.28648387141357
+INFO:root:2024-08-09 13:56:11: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 84
+INFO:root:Epoch 84 complete. Time: 32.686959743499756 Reward: 490.6440323524567
+INFO:root:2024-08-09 13:56:49: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 85
+INFO:root:Epoch 85 complete. Time: 57.03325152397156 Reward: 533.5255490274064
+INFO:root:2024-08-09 13:57:50: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 86
+INFO:root:Epoch 86 complete. Time: 22.0880184173584 Reward: 501.7593363573394
+INFO:root:2024-08-09 13:58:17: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 87
+INFO:root:Epoch 87 complete. Time: 19.63185214996338 Reward: 438.1491782054803
+INFO:root:2024-08-09 13:58:41: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 88
+INFO:root:Epoch 88 complete. Time: 33.221394538879395 Reward: 413.0689449681365
+INFO:root:2024-08-09 13:59:19: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 89
+INFO:root:Epoch 89 complete. Time: 65.02519536018372 Reward: -5863.790698740987
+INFO:root:2024-08-09 14:00:29: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 90
+INFO:root:Epoch 90 complete. Time: 12.547158241271973 Reward: 474.292210291509
+INFO:root:2024-08-09 14:00:46: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 91
+INFO:root:Epoch 91 complete. Time: 9.90454626083374 Reward: 428.1867930286292
+INFO:root:2024-08-09 14:01:00: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 92
+INFO:root:Epoch 92 complete. Time: 37.305044412612915 Reward: -509.02188041588545
+INFO:root:2024-08-09 14:01:42: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 93
+INFO:root:Epoch 93 complete. Time: 10.246047258377075 Reward: 440.9784187371487
+INFO:root:2024-08-09 14:01:57: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 94
+INFO:root:Epoch 94 complete. Time: 27.602610111236572 Reward: 561.5440069015216
+INFO:root:2024-08-09 14:02:29: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 95
+INFO:root:Epoch 95 complete. Time: 13.026241540908813 Reward: 640.8967473974519
+INFO:root:2024-08-09 14:02:47: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 96
+INFO:root:Epoch 96 complete. Time: 31.631667613983154 Reward: 495.1253996313066
+INFO:root:2024-08-09 14:03:23: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 97
+INFO:root:Epoch 97 complete. Time: 12.725372314453125 Reward: 548.7367072113715
+INFO:root:2024-08-09 14:03:41: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 98
+INFO:root:Epoch 98 complete. Time: 137.10701823234558 Reward: -701.156361019183
+INFO:root:2024-08-09 14:06:02: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt
+INFO:root:Epoch 99
+INFO:root:Epoch 99 complete. Time: 15.673531770706177 Reward: 346.57754402826424
+INFO:root:2024-08-09 14:06:23: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_Multi_novel.pt

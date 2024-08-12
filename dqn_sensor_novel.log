@@ -1,0 +1,302 @@
+INFO:root:starting training script
+INFO:root:No checkpoint detected, starting from initial state
+INFO:root:Epoch 0
+INFO:root:Epoch 0 complete. Time: 1048.6473994255066 Reward: -7103.703698501342
+INFO:root:2024-08-09 13:17:31: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 1
+INFO:root:Epoch 1 complete. Time: 388.509423494339 Reward: -1515.0861443094418
+INFO:root:2024-08-09 13:24:02: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 2
+INFO:root:Epoch 2 complete. Time: 115.44256114959717 Reward: 720.6392936998766
+INFO:root:2024-08-09 13:25:59: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 3
+INFO:root:Epoch 3 complete. Time: 71.75174188613892 Reward: 484.44164290809726
+INFO:root:2024-08-09 13:27:13: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 4
+INFO:root:Epoch 4 complete. Time: 202.00197863578796 Reward: -620.6111620163579
+INFO:root:2024-08-09 13:30:37: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 5
+INFO:root:Epoch 5 complete. Time: 89.09998226165771 Reward: -456.4289512062751
+INFO:root:2024-08-09 13:32:09: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 6
+INFO:root:Epoch 6 complete. Time: 102.13203382492065 Reward: 34.454900521489364
+INFO:root:2024-08-09 13:33:53: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 7
+INFO:root:Epoch 7 complete. Time: 147.18318796157837 Reward: -364.02204962355563
+INFO:root:2024-08-09 13:36:22: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 8
+INFO:root:Epoch 8 complete. Time: 141.4590187072754 Reward: -1140.4539254128917
+INFO:root:2024-08-09 13:38:46: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 9
+INFO:root:Epoch 9 complete. Time: 80.41174459457397 Reward: 557.9157618922098
+INFO:root:2024-08-09 13:40:08: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 10
+INFO:root:Epoch 10 complete. Time: 114.69149374961853 Reward: -1176.478498136636
+INFO:root:2024-08-09 13:42:05: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 11
+INFO:root:Epoch 11 complete. Time: 90.02608704566956 Reward: 552.7602297290141
+INFO:root:2024-08-09 13:43:37: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 12
+INFO:root:Epoch 12 complete. Time: 58.70003795623779 Reward: 458.502543089021
+INFO:root:2024-08-09 13:44:38: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 13
+INFO:root:Epoch 13 complete. Time: 56.30566620826721 Reward: 578.7180894206497
+INFO:root:2024-08-09 13:45:37: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 14
+INFO:root:Epoch 14 complete. Time: 52.278265953063965 Reward: 580.9561305530808
+INFO:root:2024-08-09 13:46:31: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 15
+INFO:root:Epoch 15 complete. Time: 100.28716707229614 Reward: -1448.392231692795
+INFO:root:2024-08-09 13:48:13: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 16
+INFO:root:Epoch 16 complete. Time: 132.09628009796143 Reward: -618.7542415275867
+INFO:root:2024-08-09 13:50:28: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 17
+INFO:root:Epoch 17 complete. Time: 54.490087032318115 Reward: 381.2347826739899
+INFO:root:2024-08-09 13:51:24: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 18
+INFO:root:Epoch 18 complete. Time: 91.87118625640869 Reward: -74.91837335578127
+INFO:root:2024-08-09 13:52:58: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 19
+INFO:root:Epoch 19 complete. Time: 51.86059904098511 Reward: 540.6079494264596
+INFO:root:2024-08-09 13:53:52: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 20
+INFO:root:Epoch 20 complete. Time: 46.67452025413513 Reward: 385.7966753405434
+INFO:root:2024-08-09 13:54:41: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 21
+INFO:root:Epoch 21 complete. Time: 53.714839220047 Reward: 455.73878835902116
+INFO:root:2024-08-09 13:55:37: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 22
+INFO:root:Epoch 22 complete. Time: 31.477123975753784 Reward: 446.04059670081506
+INFO:root:2024-08-09 13:56:11: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 23
+INFO:root:Epoch 23 complete. Time: 43.25547480583191 Reward: 537.2267796778538
+INFO:root:2024-08-09 13:56:56: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 24
+INFO:root:Epoch 24 complete. Time: 48.20646071434021 Reward: 36.847853842071075
+INFO:root:2024-08-09 13:57:46: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 25
+INFO:root:Epoch 25 complete. Time: 52.583319664001465 Reward: 422.03006848324213
+INFO:root:2024-08-09 13:58:41: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 26
+INFO:root:Epoch 26 complete. Time: 48.382121086120605 Reward: 406.39861628566564
+INFO:root:2024-08-09 13:59:31: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 27
+INFO:root:Epoch 27 complete. Time: 43.3042950630188 Reward: 481.4013748735674
+INFO:root:2024-08-09 14:00:17: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 28
+INFO:root:Epoch 28 complete. Time: 24.423046112060547 Reward: 669.3043703426857
+INFO:root:2024-08-09 14:00:44: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 29
+INFO:root:Epoch 29 complete. Time: 391.5461072921753 Reward: -6556.83019251991
+INFO:root:2024-08-09 14:07:17: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 30
+INFO:root:Epoch 30 complete. Time: 52.539331674575806 Reward: 472.23615312050373
+INFO:root:2024-08-09 14:08:12: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 31
+INFO:root:Epoch 31 complete. Time: 123.83082056045532 Reward: -890.280592599766
+INFO:root:2024-08-09 14:10:18: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 32
+INFO:root:Epoch 32 complete. Time: 42.089420795440674 Reward: 557.2308634608432
+INFO:root:2024-08-09 14:11:02: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 33
+INFO:root:Epoch 33 complete. Time: 42.23348522186279 Reward: 694.7419909033031
+INFO:root:2024-08-09 14:11:46: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 34
+INFO:root:Epoch 34 complete. Time: 63.48263621330261 Reward: 529.0098715504542
+INFO:root:2024-08-09 14:12:52: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 35
+INFO:root:Epoch 35 complete. Time: 27.377549648284912 Reward: 612.8760000995125
+INFO:root:2024-08-09 14:13:22: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 36
+INFO:root:Epoch 36 complete. Time: 161.2036361694336 Reward: 287.88066537802763
+INFO:root:2024-08-09 14:16:05: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 37
+INFO:root:Epoch 37 complete. Time: 144.50652241706848 Reward: 614.9932677851262
+INFO:root:2024-08-09 14:18:32: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 38
+INFO:root:Epoch 38 complete. Time: 31.216670989990234 Reward: 504.14772257376904
+INFO:root:2024-08-09 14:19:05: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 39
+INFO:root:Epoch 39 complete. Time: 58.524498462677 Reward: 608.6467344673729
+INFO:root:2024-08-09 14:20:06: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 40
+INFO:root:Epoch 40 complete. Time: 92.81466269493103 Reward: 540.3477353217024
+INFO:root:2024-08-09 14:21:41: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 41
+INFO:root:Epoch 41 complete. Time: 41.75261616706848 Reward: 438.66237508430595
+INFO:root:2024-08-09 14:22:24: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 42
+INFO:root:Epoch 42 complete. Time: 44.099939584732056 Reward: 561.1232417174323
+INFO:root:2024-08-09 14:23:11: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 43
+INFO:root:Epoch 43 complete. Time: 33.99062156677246 Reward: 580.8397389321606
+INFO:root:2024-08-09 14:23:47: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 44
+INFO:root:Epoch 44 complete. Time: 34.886942863464355 Reward: 619.2671099101475
+INFO:root:2024-08-09 14:24:24: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 45
+INFO:root:Epoch 45 complete. Time: 36.9471755027771 Reward: 621.3630843185081
+INFO:root:2024-08-09 14:25:03: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 46
+INFO:root:Epoch 46 complete. Time: 52.02314376831055 Reward: 680.9347300358093
+INFO:root:2024-08-09 14:25:57: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 47
+INFO:root:Epoch 47 complete. Time: 38.165316104888916 Reward: 715.9028325767933
+INFO:root:2024-08-09 14:26:37: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 48
+INFO:root:Epoch 48 complete. Time: 256.6931092739105 Reward: -6010.016257029293
+INFO:root:2024-08-09 14:30:56: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 49
+INFO:root:Epoch 49 complete. Time: 26.403422832489014 Reward: 430.53162732946566
+INFO:root:2024-08-09 14:31:25: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 50
+INFO:root:Epoch 50 complete. Time: 130.98695492744446 Reward: 266.07524259309196
+INFO:root:2024-08-09 14:33:38: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 51
+INFO:root:Epoch 51 complete. Time: 101.99025416374207 Reward: 644.65933523716
+INFO:root:2024-08-09 14:35:22: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 52
+INFO:root:Epoch 52 complete. Time: 48.31673836708069 Reward: 672.5625085470468
+INFO:root:2024-08-09 14:36:12: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 53
+INFO:root:Epoch 53 complete. Time: 89.14378833770752 Reward: 382.9859937726753
+INFO:root:2024-08-09 14:37:44: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 54
+INFO:root:Epoch 54 complete. Time: 29.9559109210968 Reward: 571.5325166685975
+INFO:root:2024-08-09 14:38:16: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 55
+INFO:root:Epoch 55 complete. Time: 29.233226776123047 Reward: 522.5210331628143
+INFO:root:2024-08-09 14:38:47: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 56
+INFO:root:Epoch 56 complete. Time: 123.08970379829407 Reward: -218.2702435963943
+INFO:root:2024-08-09 14:40:52: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 57
+INFO:root:Epoch 57 complete. Time: 273.6218626499176 Reward: -11123.391254544691
+INFO:root:2024-08-09 14:45:28: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 58
+INFO:root:Epoch 58 complete. Time: 27.42896270751953 Reward: 432.68998261610324
+INFO:root:2024-08-09 14:45:57: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 59
+INFO:root:Epoch 59 complete. Time: 33.64619445800781 Reward: 680.4009264030994
+INFO:root:2024-08-09 14:46:33: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 60
+INFO:root:Epoch 60 complete. Time: 28.53279161453247 Reward: 511.4265346626138
+INFO:root:2024-08-09 14:47:04: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 61
+INFO:root:Epoch 61 complete. Time: 15.994348764419556 Reward: 506.62638679355905
+INFO:root:2024-08-09 14:47:22: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 62
+INFO:root:Epoch 62 complete. Time: 13.455987930297852 Reward: 552.0799819555755
+INFO:root:2024-08-09 14:47:38: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 63
+INFO:root:Epoch 63 complete. Time: 23.077877283096313 Reward: 705.5430409790144
+INFO:root:2024-08-09 14:48:03: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 64
+INFO:root:Epoch 64 complete. Time: 13.017777442932129 Reward: 493.2665066156194
+INFO:root:2024-08-09 14:48:18: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 65
+INFO:root:Epoch 65 complete. Time: 86.73310470581055 Reward: 505.74797267694123
+INFO:root:2024-08-09 14:49:47: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 66
+INFO:root:Epoch 66 complete. Time: 19.329294681549072 Reward: 523.6819419649494
+INFO:root:2024-08-09 14:50:08: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 67
+INFO:root:Epoch 67 complete. Time: 26.952046871185303 Reward: 547.0364746690971
+INFO:root:2024-08-09 14:50:37: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 68
+INFO:root:Epoch 68 complete. Time: 16.424134254455566 Reward: 477.52997529200604
+INFO:root:2024-08-09 14:50:56: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 69
+INFO:root:Epoch 69 complete. Time: 22.69932246208191 Reward: 589.9325294296001
+INFO:root:2024-08-09 14:51:20: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 70
+INFO:root:Epoch 70 complete. Time: 17.513291835784912 Reward: 608.2370457230583
+INFO:root:2024-08-09 14:51:40: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 71
+INFO:root:Epoch 71 complete. Time: 22.00307583808899 Reward: 529.7093689078866
+INFO:root:2024-08-09 14:52:04: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 72
+INFO:root:Epoch 72 complete. Time: 14.517065525054932 Reward: 491.4735396385357
+INFO:root:2024-08-09 14:52:21: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 73
+INFO:root:Epoch 73 complete. Time: 36.378663063049316 Reward: 660.2578503184077
+INFO:root:2024-08-09 14:52:59: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 74
+INFO:root:Epoch 74 complete. Time: 15.98511004447937 Reward: 578.626877706495
+INFO:root:2024-08-09 14:53:17: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 75
+INFO:root:Epoch 75 complete. Time: 14.33370304107666 Reward: 491.96327610716463
+INFO:root:2024-08-09 14:53:34: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 76
+INFO:root:Epoch 76 complete. Time: 37.80089616775513 Reward: 666.5755881633999
+INFO:root:2024-08-09 14:54:14: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 77
+INFO:root:Epoch 77 complete. Time: 49.689329385757446 Reward: 513.2430484212324
+INFO:root:2024-08-09 14:55:05: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 78
+INFO:root:Epoch 78 complete. Time: 15.987207412719727 Reward: 529.0442503288722
+INFO:root:2024-08-09 14:55:24: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 79
+INFO:root:Epoch 79 complete. Time: 211.98434233665466 Reward: -17728.994287541922
+INFO:root:2024-08-09 14:58:58: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 80
+INFO:root:Epoch 80 complete. Time: 11.103301525115967 Reward: 596.8548200356363
+INFO:root:2024-08-09 14:59:11: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 81
+INFO:root:Epoch 81 complete. Time: 98.77888321876526 Reward: 550.8156286951996
+INFO:root:2024-08-09 15:00:52: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 82
+INFO:root:Epoch 82 complete. Time: 12.005750179290771 Reward: 564.7204765168772
+INFO:root:2024-08-09 15:01:06: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 83
+INFO:root:Epoch 83 complete. Time: 59.249096155166626 Reward: 720.7468473004284
+INFO:root:2024-08-09 15:02:07: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 84
+INFO:root:Epoch 84 complete. Time: 44.16301679611206 Reward: 575.8442570569732
+INFO:root:2024-08-09 15:02:54: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 85
+INFO:root:Epoch 85 complete. Time: 1131.3834505081177 Reward: -6812.778189723539
+INFO:root:2024-08-09 15:21:47: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 86
+INFO:root:Epoch 86 complete. Time: 41.753249645233154 Reward: -494.1791605123426
+INFO:root:2024-08-09 15:22:31: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 87
+INFO:root:Epoch 87 complete. Time: 67.98779058456421 Reward: -5071.182908174481
+INFO:root:2024-08-09 15:23:41: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 88
+INFO:root:Epoch 88 complete. Time: 15.364529609680176 Reward: 552.2572040765453
+INFO:root:2024-08-09 15:23:59: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 89
+INFO:root:Epoch 89 complete. Time: 27.598647117614746 Reward: 506.9090967903501
+INFO:root:2024-08-09 15:24:28: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 90
+INFO:root:Epoch 90 complete. Time: 81.46813464164734 Reward: 178.988972835887
+INFO:root:2024-08-09 15:25:52: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 91
+INFO:root:Epoch 91 complete. Time: 97.84283638000488 Reward: -6659.7366307283455
+INFO:root:2024-08-09 15:27:32: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 92
+INFO:root:Epoch 92 complete. Time: 13.792943239212036 Reward: 417.18028558087076
+INFO:root:2024-08-09 15:27:48: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 93
+INFO:root:Epoch 93 complete. Time: 49.9641900062561 Reward: 548.9340340729765
+INFO:root:2024-08-09 15:28:40: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 94
+INFO:root:Epoch 94 complete. Time: 21.973541975021362 Reward: 253.81723835690474
+INFO:root:2024-08-09 15:29:04: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 95
+INFO:root:Epoch 95 complete. Time: 27.13742470741272 Reward: 662.9591274673672
+INFO:root:2024-08-09 15:29:33: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 96
+INFO:root:Epoch 96 complete. Time: 54.623366832733154 Reward: 680.2387238216099
+INFO:root:2024-08-09 15:30:30: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 97
+INFO:root:Epoch 97 complete. Time: 53.46400022506714 Reward: 502.0722599467766
+INFO:root:2024-08-09 15:31:25: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 98
+INFO:root:Epoch 98 complete. Time: 96.10929846763611 Reward: 613.902258515501
+INFO:root:2024-08-09 15:33:04: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt
+INFO:root:Epoch 99
+INFO:root:Epoch 99 complete. Time: 8.443664073944092 Reward: 469.25172496474096
+INFO:root:2024-08-09 15:33:14: Checkpoint saved at /h/steve22/repos/Intro2AI_Project/checkpoint/checkpoint_DDQN_sensor_novel.pt

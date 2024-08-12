@@ -1,8 +1,5 @@
 venv/
 venv38/
-*.pckl
-*.pt
 *.out
-*.log
 checkpoint/
 logs/
