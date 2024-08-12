@@ -11,13 +11,12 @@ import torch.optim as optim
 import torch.nn.functional as F
 
 import sys
-sys.path.insert(1, './environments')
 from nav_obstacle_env import Nav_Obstacle_Env
-from push_empty_env import Push_Empty_Env
 import models
 
 # env = Wheeled_Robot_Sim(state_type='')
-env = Push_Empty_Env()
+env = Nav_Obstacle_Env()
+env.state_type = 'sensor'
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 Transition = namedtuple('Transition',
@@ -25,14 +24,16 @@ Transition = namedtuple('Transition',
 
 # Get number of actions from env
 n_actions = len(env.available_actions)
-# Get numbaer of state observations
+# Get number of state observations
 state = env.reset()
 n_observations = len(state)
+# print(state)
 # checkpoint_path = 'model - no pushing.pt'
-checkpoint_path = 'checkpoint/checkpoint.pt'
+checkpoint_path = 'checkpoint_DDQN_sensor.pt'
 
 
-policy_net = models.VisionDQN(n_observations, n_actions).to(device)
+policy_net = models.SensorDQN(n_observations, n_actions).to(device)
+print(n_observations, n_actions)
 policy_net.eval()
 
 checkpoint = torch.load(checkpoint_path, map_location=device)
@@ -45,12 +46,23 @@ state = env.reset()
 state = torch.tensor(state, dtype=torch.float32, device=device).unsqueeze(0)
 done = False
 print(checkpoint['epoch'])
+frame = 0
+action_freq = 25
 while not done:
-    action = select_action(state)
-    state, reward, done, info = env.step(env.available_actions[action])
-    state = torch.tensor(state, dtype=torch.float32, device=device).unsqueeze(0)
+    if frame % action_freq == 0:
+        action = select_action(state)
+        env.step(env.available_actions[action])
+        
+    elif frame % action_freq == action_freq-1:
+        state, reward, done, info = env.step(None)
+        state = torch.tensor(state, dtype=torch.float32, device=device).unsqueeze(0)
+        print(reward, end='\r')
+
+    else:
+        env.step(None)
     if done:
         state = env.reset()
         state = torch.tensor(state, dtype=torch.float32, device=device).unsqueeze(0)
         done = False
+    frame += 1
 print(reward)

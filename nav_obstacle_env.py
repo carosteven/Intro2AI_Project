@@ -69,9 +69,10 @@ class Nav_Obstacle_Env(object):
         self.reward_from_last_action = 0
 
         # Rewards
-        self.collision_penalty = 0.25
-        self.goal_reward = 1
-        self.partial_rewards_scale = 0.5
+        self.collision_penalty = 2
+        self.action_penalty = 0
+        self.goal_reward = 10
+        self.partial_rewards_scale = 1
 
         # Available actions
         self.available_actions = ['forward', 'backward', 'turn_cw', 'turn_ccw']
@@ -229,10 +230,12 @@ class Nav_Obstacle_Env(object):
 
             if action is not None:
                 self.reward +=  self.reward_from_last_action
+                # print(self.reward_from_last_action, end='\r')
                 self.reward_from_last_action = 0
             
             # Calculate reward
             self.reward_from_last_action += self.get_reward(True if action is not None else False)
+            print(self.reward, end='\r')
             
             if self._done:
                 self.reset()
@@ -294,7 +297,8 @@ class Nav_Obstacle_Env(object):
         action = None
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                self._running = False
+                # self._running = False
+                self._done = True
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                 self._running = False
 
@@ -428,7 +432,7 @@ class Nav_Obstacle_Env(object):
         """velocity, left/right sensor data, and direction (angle in rad)"""
         state = []
         # Velocity
-        state.append(self._agent['robot'].velocity.length)
+        # state.append(self._agent['robot'].velocity.length)
 
         # Sensors
         for sensor in [self.left_sensor_data, self.right_sensor_data]:
@@ -469,7 +473,7 @@ class Nav_Obstacle_Env(object):
         """
         reward = 0
         if action_taken:
-            # reward -= self.action_penalty
+            reward -= self.action_penalty
             pass
 
         if self.collision_occuring:

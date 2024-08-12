@@ -15,7 +15,7 @@ gamma = 0.8
 epsilon = 0.1
 action_freq = 25
 DEFAULT_ACT = env.available_actions[0]
-train = True
+train = False
 continue_training = False
 
 def init_Q_n(Q, n, s):
@@ -83,6 +83,7 @@ def train_model(epochs=1, Q={}, n={}):
                 # Observe s' and r
                 _, reward, done, _ = env.step(None)
                 reward_stats[-1] += reward
+                print(reward_stats[-1])
                 next_state = get_state()
 
                 # Initialize Q and n (if necessary)
@@ -119,7 +120,7 @@ def test_model(Q_actual, n_actual):
     env.__init__()
     Q = Q_actual
     n = n_actual
-
+    frame = 0
     while not env._done:
         # env.step()
         print(f"Score: {round(env.reward, 2)}", end='\r')
@@ -127,12 +128,15 @@ def test_model(Q_actual, n_actual):
         current_state = get_state()
         if Q.get((current_state, DEFAULT_ACT)) == None:
                 Q, n = init_Q_n(Q, n, current_state)
-        
-        action = env.available_actions[policy(Q, current_state)]
-        env.step(action)
+        if frame % action_freq == 0:
+            action = env.available_actions[policy(Q, current_state)]
+            env.step(action)
+        else:
+            env.step(None)
+        frame += 1
 
 
-train = True
+train = False
 
 if train == True:
     if continue_training == True:
@@ -150,8 +154,11 @@ if train == True:
     f.close()
 
 else:
-    f = open('Q.pckl', 'rb')
-    Q, n = pickle.load(f)
+    f = open('Q_old.pckl', 'rb')
+    Q, n,r,t = pickle.load(f)
     f.close()
+    print(r)
+    plt.plot(r)
+    plt.show()
     test_model(Q, n)
 
